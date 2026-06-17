@@ -2,13 +2,11 @@
 
 A full-stack web application to track job applications through hiring stages. Built with React, Express, and PostgreSQL.
 
----
 
 ## Screenshots
 
-> _Add screenshots or a Loom/YouTube demo link here before submission._
 
----
+
 
 ## Tech Stack
 
@@ -21,7 +19,6 @@ A full-stack web application to track job applications through hiring stages. Bu
 | Testing   | Jest + ts-jest                            |
 | Container | Docker + docker-compose                   |
 
----
 
 ## Features
 
@@ -36,7 +33,6 @@ A full-stack web application to track job applications through hiring stages. Bu
 - **Loading states** — spinner while fetching, empty states with helpful copy
 - **Responsive** — works on mobile and desktop
 
----
 
 ## Prerequisites
 
@@ -44,7 +40,6 @@ A full-stack web application to track job applications through hiring stages. Bu
 - npm ≥ 9
 - PostgreSQL 14+ running locally **or** Docker + docker-compose
 
----
 
 ## Installation
 
@@ -90,7 +85,6 @@ cp frontend/.env.example frontend/.env
 |----------------|----------------------------|------------------------|
 | `VITE_API_URL` | `http://localhost:4000`    | Backend API base URL   |
 
----
 
 ## Running in Development
 
@@ -129,7 +123,6 @@ This starts:
 > docker-compose exec backend node dist/migrate.js
 > ```
 
----
 
 ## Running Tests
 
@@ -139,7 +132,6 @@ cd backend && npm test
 
 Tests cover type validation, DTO shapes, and business logic helpers.
 
----
 
 ## API Documentation
 
@@ -179,7 +171,6 @@ List all applications. Supports filtering and pagination.
 }
 ```
 
----
 
 ### `GET /applications/:id`
 
@@ -187,7 +178,6 @@ Get a single application by UUID.
 
 **Response:** `Application` object or `404`.
 
----
 
 ### `POST /applications`
 
@@ -215,7 +205,6 @@ Create a new application.
 
 **Response:** `201` with created `Application`.
 
----
 
 ### `PATCH /applications/:id`
 
@@ -225,7 +214,6 @@ Partially update an application. All fields are optional.
 
 **Response:** Updated `Application` or `404`.
 
----
 
 ### `DELETE /applications/:id`
 
@@ -233,7 +221,6 @@ Delete an application.
 
 **Response:** `204 No Content` or `404`.
 
----
 
 ## Data Model
 
@@ -256,45 +243,3 @@ An `updated_at` trigger fires automatically on every `UPDATE`.
 
 Indexes on `status`, `applied_date DESC`, and a GIN full-text index on `company_name` are created by the migration.
 
----
-
-## Project Structure
-
-```
-job-tracker/
-├── backend/
-│   ├── src/
-│   │   ├── __tests__/          # Jest unit tests
-│   │   ├── controllers/        # Request handlers
-│   │   ├── db/                 # Pool config + migration script
-│   │   ├── middleware/         # Validation + error handling
-│   │   ├── routes/             # Express routers
-│   │   ├── types/              # Shared TypeScript types
-│   │   └── index.ts            # App entrypoint
-│   ├── Dockerfile
-│   ├── .env.example
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── api/                # Axios client + API calls
-│   │   ├── components/         # UI components
-│   │   │   ├── ui/             # Modal, ConfirmDialog, StatusBadge
-│   │   │   ├── ApplicationRow.tsx
-│   │   │   ├── ViewApplication.tsx
-│   │   │   └── forms/ApplicationForm.tsx
-│   │   ├── hooks/              # useApplications data hook
-│   │   ├── types/              # Shared TypeScript types + constants
-│   │   └── App.tsx             # Root component
-│   ├── Dockerfile
-│   ├── nginx.conf
-│   ├── .env.example
-│   └── package.json
-├── docker-compose.yml
-└── README.md
-```
-
----
-
-## Live Demo
-
-> _Add your deployment URL here if deployed (Render, Railway, Vercel, etc.)._
