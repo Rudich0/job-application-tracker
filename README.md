@@ -5,7 +5,24 @@ A full-stack web application to track job applications through hiring stages. Bu
 
 ## Screenshots
 
+# Landing page
 
+![Landing page](screenshots/image1.png)
+
+# Add application page
+![Add application page](screenshots/image2.png)
+
+# Application Filtering
+![Application Filtering](screenshots/image3.png)
+
+# Application details page
+![Application details page](screenshots/image4.png)
+
+# Edit Application page
+![Edit Application page](screenshots/image5.png)
+
+# Search Application from name
+![Search Application from name](screenshots/image6.png)
 
 
 ## Tech Stack
@@ -243,3 +260,8 @@ An `updated_at` trigger fires automatically on every `UPDATE`.
 
 Indexes on `status`, `applied_date DESC`, and a GIN full-text index on `company_name` are created by the migration.
 
+## Demo Video
+
+## Demo Video
+
+[Watch the Demo](https://www.loom.com/share/your-demo-video-link)
