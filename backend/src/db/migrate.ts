@@ -48,10 +48,10 @@ const migrate = async (): Promise<void> => {
     `);
 
     await client.query('COMMIT');
-    console.log('✅ Migration completed successfully');
+    console.log(' Migration completed successfully');
   } catch (err) {
     await client.query('ROLLBACK');
-    console.error('❌ Migration failed:', err);
+    console.error(' Migration failed:', err);
     throw err;
   } finally {
     client.release();
