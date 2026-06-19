@@ -262,6 +262,4 @@ Indexes on `status`, `applied_date DESC`, and a GIN full-text index on `company_
 
 ## Demo Video
 
-## Demo Video
-
 [Watch the Demo](https://www.loom.com/share/your-demo-video-link)
